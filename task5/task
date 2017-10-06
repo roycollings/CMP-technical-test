@@ -1,0 +1,9 @@
+Task 5 (Linux):
+
+How would you:
+
+- Login (SSH) into a server with IP 45.65.34.23, user root and a private key / identity file called “MyPrivateKey.key”
+
+- Go to folder “/var/logs”
+
+- Show on console the latest 30 lines of the file “super-app.log"
