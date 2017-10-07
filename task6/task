@@ -1,0 +1,6 @@
+Task 6 (Automated End-to-End web testing):
+
+Perform a test automation over wikipedia.org search feature and search for “test automation” query, that should lead you to the wikipedia article about test automation. We've already evaluated your test case generation skills on the previous question, so there's no need to implement more than just the specified user flow.
+
+At this point we don’t care about complexity, we’re just evaluating your proficiency on selenium, locating elements and basically your web automation skills. You can use whatever language you prefer as long as you use Selenium 3.0 (Webdriver). Use as many features as you want of the testing framework you choose, use as many patterns you want to, the required reporting is console output, but having a nicer reporting is a plus. The "cleaner" the code, the better.
+
