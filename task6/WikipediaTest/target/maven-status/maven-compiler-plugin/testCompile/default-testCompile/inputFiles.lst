@@ -1,2 +1,9 @@
 /home/roy/projects/CMP/task6/WikipediaTest/src/test/java/com/wikipedia/cmptest/RunCukesTest.java
+/home/roy/projects/CMP/task6/WikipediaTest/src/test/java/com/wikipedia/cmptest/pages/search/Elements.java
+/home/roy/projects/CMP/task6/WikipediaTest/src/test/java/com/wikipedia/cmptest/pages/subject/SubjectPage.java
+/home/roy/projects/CMP/task6/WikipediaTest/src/test/java/com/wikipedia/cmptest/support/WebDriverUtilities.java
+/home/roy/projects/CMP/task6/WikipediaTest/src/test/java/com/wikipedia/cmptest/pages/subject/Elements.java
+/home/roy/projects/CMP/task6/WikipediaTest/src/test/java/com/wikipedia/cmptest/RuntimeSettings.java
 /home/roy/projects/CMP/task6/WikipediaTest/src/test/java/com/wikipedia/cmptest/stepDefinitions/SearchSteps.java
+/home/roy/projects/CMP/task6/WikipediaTest/src/test/java/com/wikipedia/cmptest/pages/search/SearchPage.java
+/home/roy/projects/CMP/task6/WikipediaTest/src/test/java/com/wikipedia/cmptest/stepDefinitions/Hooks.java
