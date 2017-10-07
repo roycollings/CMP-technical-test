@@ -1,0 +1,12 @@
+Task 3 (API testing + test case generation):
+
+Here you'll find a REST API:
+
+
+https://github.com/Giphy/GiphyAPI#search-endpoint
+
+Sample call to retrieve a list of images:
+
+GET http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC
+
+Your third task is to extensively test that API endpoint (just the search endpoint, not the rest of the api!). You can use the provided api_key, it’s a public key for testing out that api. Please read the documentation before starting. Provide a list of test cases, covering both functional and non-functional, with the actual parameters used to execute your test cases (usually a test matrix helps a lot). Not specifically needed for this task but you can automate your test cases. This API allows nearly unlimited parameter combinations, limit your test cases list to at most 20 test cases and a minimum of 10, covering as many features and corner cases as possible, be creative!
