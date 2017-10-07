@@ -19,9 +19,8 @@ public class SearchSteps {
     @Given("^I have launched the browser and navigated to the Wikipedia search page$")
     public void I_have_launched_the_browser_and_navigated_to_the_Wikipedia_search_page() throws Throwable {
         this.driver = WebDriverUtilities.getChromerDriver();
-        String rootUrl = RuntimeSettings.getRootUrl();
-        driver.get(rootUrl);
-        WebDriverUtilities.setCurrentDriver(driver);
+        String applicationUrl = RuntimeSettings.getApplicationUrl();
+        driver.get(applicationUrl);
     }
 
     @When("^I search for (.*)$")

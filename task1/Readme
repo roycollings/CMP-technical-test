@@ -1,3 +1,0 @@
-This is a sample of what I would expect to find in a defect report. For most bugs I'd be looking for 'Actions to reproduce', 'Expected' and 'Actual' but that would be redundant in this case as this is simply the output of an analysis tool.
-
-(I've also made the report a .pdf on this occasion so the formatting would hold between different systems - my linux word processor sometimes formats differently to OSX. In 'real life' this would be an editable entity in something like JIRA or another defect tracking system.)

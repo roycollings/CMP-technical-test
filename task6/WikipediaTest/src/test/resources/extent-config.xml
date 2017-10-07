@@ -14,10 +14,10 @@
         <protocol>https</protocol>
 
         <!-- title of the document -->
-        <documentTitle>My Project test results</documentTitle>
+        <documentTitle>CMP task6 results</documentTitle>
 
         <!-- report name - displayed at top-nav -->
-        <reportName>My Project test results</reportName>
+        <reportName>CMP task6 results</reportName>
 
         <!-- location of charts in the test view -->
         <!-- top, bottom -->

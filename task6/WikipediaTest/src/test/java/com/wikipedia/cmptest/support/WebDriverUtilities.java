@@ -19,16 +19,8 @@ public class WebDriverUtilities {
         System.setProperty("webdriver.chrome.args", "--disable-logging --start-maximized");
         System.setProperty("webdriver.chrome.silentOutput", "true");
 
-        WebDriver driver = new ChromeDriver();
+        currentDriver = new ChromeDriver();
 
-        return driver;
-    }
-
-    public static void setCurrentDriver(WebDriver driver){
-        currentDriver = driver;
-    }
-
-    public static WebDriver getCurrentDriver(){
         return currentDriver;
     }
 
