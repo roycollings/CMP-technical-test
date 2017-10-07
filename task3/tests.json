@@ -7,29 +7,35 @@
                     "description": "valid key (happy path)",
                     "parameters": "?q=funny+cat&api_key=dc6zaTOxFJmzC",
                     "expected": {
-                        "status": 200,
-                        "offset": 0,
-                        "count": 25
+                        "meta": {
+                            "status": 200
+                        },
+                        "pagination": {
+                            "offset": 0,
+                            "count": 25
+                        }
                     }
                 },
                 {
                     "description": "wrong key",
                     "parameters": "?q=funny+cat&api_key=dc6zaTOXXXXC",
                     "expected": {
-                        "status": 403
+                        "meta": {
+                            "status": 403
+                        }
                     }
                 },
                 {
                     "description": "no key",
                     "parameters": "?q=funny+cat",
-                    "expected": {
+                    "meta": {
                         "status": 403
                     }
                 },
                 {
                     "description": "no query",
                     "parameters": "&api_key=dc6zaTOxFJzC",
-                    "expected": {
+                    "meta": {
                         "status": 400
                     }
                 }
@@ -42,52 +48,76 @@
                     "description": "no results",
                     "parameters": "?q=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&api_key=dc6zaTOxFJmzC",
                     "expected": {
-                        "status": 200,
-                        "offset": 0,
-                        "count": 0,
-                        "totalCount": 0
+                        "meta": {
+                            "status": 200
+                        },
+                        "pagination": {
+                            "offset": 0,
+                            "count": 0,
+                            "total_count": 0
+                        }
                     }
                 },
                 {
                     "description": "limited results",
                     "parameters": "?q=dog&limit=10&api_key=dc6zaTOxFJmzC",
                     "expected": {
-                        "status": 200,
-                        "offset": 0,
-                        "count": 10
+                        "meta": {
+                            "status": 200
+                        },
+                        "pagination": {
+                            "offset": 0,
+                            "count": 10
+                        }
                     }
                 },
                 {
                     "description": "offset greater than 0",
                     "parameters": "?q=dog&offset=5&api_key=dc6zaTOxFJmzC",
                     "expected": {
-                        "status": 200,
-                        "offset": 5
+                        "meta": {
+                            "status": 200
+                        },
+                        "pagination": {
+                            "offset": 5
+                        }
                     }
                 },
                 {
                     "description": "offset greater than limit",
                     "parameters": "?q=dog&limit=10&offset=50&api_key=dc6zaTOxFJmzC",
                     "expected": {
-                        "status": 200,
-                        "count": 10,
-                        "offset": 50
+                        "meta": {
+                            "status": 200
+                        },
+                        "pagination": {
+                            "offset": 50,
+                            "count": 10
+                        }
                     }
                 },
                 {
                     "description": "offset greater than results",
                     "parameters": "?q=dog&offset=5000&api_key=dc6zaTOxFJmzC",
                     "expected": {
-                        "status": 200,
-                        "offset": 5000
+                        "meta": {
+                            "status": 200
+                        },
+                        "pagination": {
+                            "offset": 0
+                        }
                     }
                 },
                 {
                     "description": "limit greater than results",
                     "parameters": "?q=dog&limit=500000&api_key=dc6zaTOxFJmzC",
                     "expected": {
-                        "status": 200,
-                        "offset": 0
+                        "meta": {
+                            "status": 200
+                        },
+                        "pagination": {
+                            "offset": 0
+                        }
                     }
                 }
             ]

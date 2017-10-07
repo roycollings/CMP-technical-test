@@ -1,30 +1,22 @@
-module.exports = (result, test) => {
+module.exports = (actualResult, test) => {
 
-  if ("meta" in result) {
-    let status = result.meta.status;
+  let expectedResult = test.expected;
 
-    if (test.expected.status != status) {
-console.log('STATUS: ', test.expected.status, ' vs ', status);
+  for (parentKey in expectedResult) {
+    if (!checkKeyValuesMatch(expectedResult[parentKey], actualResult[parentKey])) {
       return false;
     }
   }
 
-  if (result.hasOwnProperty('pagination')) {
-    let totalCount = result.pagination.total_count;
-    let count = result.pagination.count;
-    let offset = result.pagination.offset;
+  return true;
+}
 
-    if (undefined != test.expected.totalCount && test.expected.totalCount != totalCount) {
-      return false;
-    }
-
-    if (undefined != test.expected.offset && test.expected.offset != offset) {
-      return false;
-    }
-
-    if (undefined != test.expected.count && test.expected.count != count) {
-      return false;
-    }
+function checkKeyValuesMatch(expectedResult, actualResult) {
+  for (key in expectedResult) {
+    if (undefined != actualResult)
+      if (expectedResult[key] != actualResult[key]) {
+        return false;
+      }
   }
 
   return true;
